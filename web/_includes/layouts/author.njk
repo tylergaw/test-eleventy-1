@@ -4,6 +4,8 @@ templateClass: tmpl-author
 ---
 <h1>{{ author.name }}</h1>
 
+<img src="{{ author.image | urlFor }}" alt="{{ author.image.alt }}" />
+
 {{ author.bio | markdownify | safe }}
 
 <p><a href="{{ '/' | url }}">← Home</a></p>
